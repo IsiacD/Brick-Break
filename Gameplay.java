@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 import javax.swing.Timer;
-
+import greenfoot.*;
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
 	private static final long serialVersionUID = 1L;
 	private boolean play = false;
@@ -173,8 +173,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
 		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
 			if(!play) {
 				play = true;
-				ballposX = 643;
-				ballposY = 638;
+				ballposX = Greenfoot.getRandomNumber(getWidth()-100);
+				ballposY = Greenfoot.getRandomNumber(getHeight()-100);
 				ballXdir = 1;
 				ballYdir = -2;
 				playerX = 527;
